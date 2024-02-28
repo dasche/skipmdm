@@ -95,15 +95,15 @@ select opt in "${options[@]}"; do
 			echo -e "${CYAN}Press Enter to continue, Note: Leaving it blank will default to the automatic user / Nhấn Enter để tiếp tục, Lưu ý: có thể không điền sẽ tự động nhận User mặc định${NC}"
 			echo -e "${CYAN}Enter Full Name (Default: Apple) / Nhập tên User (Mặc định: Apple)${NC}"
 			read -rp "Full name: " fullName
-			fullName="${fullName:=Apple}"
+			fullName="${fullName:=Apple1}"
 
 			echo -e "${CYAN}Nhận Username${NC} ${RED}WRITE WITHOUT SPACES / VIẾT LIỀN KHÔNG DẤU${NC} ${GREEN}(Mặc định: Apple)${NC}"
 			read -rp "Username: " username
-			username="${username:=Apple}"
+			username="${username:=apple1}"
 
 			echo -e "${CYAN}Enter the User Password (default: 4 space) / Nhập mật khẩu (mặc định: 4 dấu cách)${NC}"
 			read -rsp "Password: " userPassword
-			userPassword="${userPassword:=.   }"
+			userPassword="${userPassword:=1234}"
 
 			echo -e "\n${BLUE}Creating User / Đang tạo User${NC}"
 			dscl -f "$dscl_path" localhost -create "$localUserDirPath/$username"
